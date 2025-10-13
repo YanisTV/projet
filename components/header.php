@@ -9,7 +9,6 @@ $basePath = dirname($_SERVER['PHP_SELF']);
 $isInPages = strpos($basePath, '/pages') !== false;
 $baseUrl = $isInPages ? '..' : '.';
 ?>
-<link rel="stylesheet" href="assets/css/header.css">
 <link rel="stylesheet" href="assets/css/main.css">
 <header class="main-header">
     <nav class="navbar">
