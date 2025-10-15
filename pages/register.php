@@ -136,7 +136,6 @@
                             </div>
                         </div>
 
-
                         <!-- Submit Button -->
                         <button type="submit" class="btn btn-primary btn-full">
                             Créer mon compte
