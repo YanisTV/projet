@@ -1,11 +1,7 @@
-<?php
 
-// Define base path for navigation
-$basePath = dirname($_SERVER['PHP_SELF']);
-$isInPages = strpos($basePath, '/pages') !== false;
-$baseUrl = $isInPages ? '..' : '.';
-?>
+<head>
 <link rel="stylesheet" href="assets/css/main.css">
+<head>
 <footer class="main-footer">
     <div class="footer-container">
         <!-- Footer Top Section -->
@@ -22,9 +18,9 @@ $baseUrl = $isInPages ? '..' : '.';
             <div class="footer-section">
                 <h4 class="footer-heading">Liens rapides</h4>
                 <ul class="footer-links">
-                    <li><a href="<?php echo $baseUrl; ?>/pages/cgv.php" class="footer-link">Conditions Générales de Vente</a></li>
-                    <li><a href="<?php echo $baseUrl; ?>/pages/legal.php" class="footer-link">Mentions Légales</a></li>
-                    <li><a href="<?php echo $baseUrl; ?>/pages/contact.php" class="footer-link">Nous Contacter</a></li>
+                    <li><a href="../pages/cgv.php" class="footer-link">Conditions Générales de Vente</a></li>
+                    <li><a href="../pages/legal.php" class="footer-link">Mentions Légales</a></li>
+                    <li><a href="../pages/contact.php" class="footer-link">Nous Contacter</a></li>
                 </ul>
             </div>
 
