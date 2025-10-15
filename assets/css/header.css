@@ -1,156 +1,62 @@
-/* ===================================
-            HEADER & NAVBAR
-   =================================== */
-
-.main-header {
-    background-color: var(--color-white);
-    box-shadow: var(--shadow-sm);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar {
-    padding: var(--spacing-sm) 0;
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo a {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    text-decoration: none;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
-    color: var(--color-gray-900);
-}
-
-.logo-image {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-}
-
-.logo-icon {
-    font-size: var(--font-size-2xl);
-}
-
-.logo-text {
-    color: var(--color-primary);
-}
-
-/* Mobile Menu Toggle */
-.nav-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: var(--spacing-xs);
-}
-
-.hamburger {
-    width: 1.5rem;
-    height: 0.125rem;
-    background-color: var(--color-gray-800);
-    transition: var(--transition-base);
-}
-
-/* Navigation Menu */
-.nav-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--color-white);
-    box-shadow: var(--shadow-lg);
-    padding: var(--spacing-md);
-}
-
-.nav-menu.active {
-    display: block;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-md);
-}
-
-.nav-link {
-    text-decoration: none;
+.user-greeting {
+    font-size: 0.875rem;
     color: var(--color-gray-700);
-    font-weight: 500;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    display: block;
-    border-radius: var(--radius-md);
-    transition: var(--transition-fast);
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.user-greeting strong {
     color: var(--color-primary);
-    background-color: var(--color-gray-50);
 }
 
-.nav-auth {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
+@media (max-width: 767px) {
+    .user-greeting {
+        display: block;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
 }
 
-/* ===================================
-   BUTTONS
-   =================================== */
-
-.btn {
-    display: inline-block;
-    padding: 0.625rem 1.25rem;
-    font-size: var(--font-size-base);
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    border-radius: var(--radius-md);
-    cursor: pointer;
-    transition: var(--transition-fast);
+/* Dark mode styles */
+body.dark {
+    background-color: #121212;
+    color: #f0f0f0;
 }
 
-.btn-primary {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+body.dark .main-header {
+    background-color: #1f1f1f;
 }
 
-.btn-primary:hover {
-    background-color: var(--color-primary-dark);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow-md);
+body.dark .main-footer {
+    background-color: #111111;
+    color: #ccc;
 }
 
-.btn-outline {
-    background-color: transparent;
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
+body.dark .feature-card,
+body.dark .auth-card,
+body.dark section {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
 }
 
-.btn-outline:hover {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+body.dark .btn-primary {
+    background-color: #333333;
+    color: #f0f0f0;
 }
 
-.btn-large {
-    padding: 0.875rem 2rem;
-    font-size: var(--font-size-lg);
+body.dark .btn-outline {
+    border-color: #f0f0f0;
+    color: #f0f0f0;
+}
+
+body.dark a {
+    color: #66b2ff;
+}
+
+body.dark .nav-link:hover {
+    color: #fbbf24;
+}
+
+body.dark .user-greeting {
+    color: #ccc;
 }

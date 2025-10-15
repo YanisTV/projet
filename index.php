@@ -13,7 +13,7 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Hero Section --> 
+        <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-container">
                 <div class="hero-content">
@@ -32,6 +32,11 @@
                         <a href="#features" class="btn btn-outline btn-large">
                             En savoir plus
                         </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-illustration">
+                        <span class="illustration-icon">🛒</span>
                     </div>
                 </div>
             </div>
@@ -85,6 +90,18 @@
             </div>
         </section>
 
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-container">
+                <h2 class="cta-title">Prêt à commencer ?</h2>
+                <p class="cta-description">
+                    Rejoignez des milliers d'utilisateurs qui organisent leurs courses avec ShopList
+                </p>
+                <a href="pages/register.php" class="btn btn-primary btn-large">
+                    Créer votre compte
+                </a>
+            </div>
+        </section>
     </main>
 
     <!-- Include Footer -->
