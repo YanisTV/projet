@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Connectez-vous à votre compte ShopList">
     <title>Connexion - ShopList</title>
-        <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
     <!-- Include Header -->
@@ -37,6 +37,7 @@
                                 id="email" 
                                 name="email" 
                                 class="form-input" 
+                                placeholder="vous@exemple.com"
                                 required
                                 autocomplete="email"
                             >
@@ -53,10 +54,19 @@
                                     id="password" 
                                     name="password" 
                                     class="form-input" 
+                                    placeholder="••••••••"
                                     required
                                     autocomplete="current-password"
                                     minlength="8"
                                 >
+                                <button 
+                                    type="button" 
+                                    class="input-icon-btn" 
+                                    id="togglePassword"
+                                    aria-label="Afficher le mot de passe"
+                                >
+                                    👁️
+                                </button>
                             </div>
                         </div>
 

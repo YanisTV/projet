@@ -37,7 +37,9 @@
                                 id="firstName" 
                                 name="first_name" 
                                 class="form-input" 
+                                placeholder="Jean"
                                 required
+                                autocomplete="given-name"
                                 minlength="2"
                                 maxlength="50"
                             >
@@ -53,7 +55,9 @@
                                 id="lastName" 
                                 name="last_name" 
                                 class="form-input" 
+                                placeholder="Dupont"
                                 required
+                                autocomplete="family-name"
                                 minlength="2"
                                 maxlength="50"
                             >
@@ -69,7 +73,9 @@
                                 id="email" 
                                 name="email" 
                                 class="form-input" 
+                                placeholder="vous@exemple.com"
                                 required
+                                autocomplete="email"
                             >
                         </div>
 
@@ -84,11 +90,19 @@
                                     id="password" 
                                     name="password" 
                                     class="form-input" 
+                                    placeholder="••••••••"
                                     required
-                                
+                                    autocomplete="new-password"
                                     minlength="8"
                                 >
-
+                                <button 
+                                    type="button" 
+                                    class="input-icon-btn" 
+                                    id="togglePassword"
+                                    aria-label="Afficher le mot de passe"
+                                >
+                                    👁️
+                                </button>
                             </div>
                             <p class="form-hint">
                                 Minimum 8 caractères
@@ -106,28 +120,20 @@
                                     id="confirmPassword" 
                                     name="confirm_password" 
                                     class="form-input" 
+                                    placeholder="••••••••"
                                     required
                                     autocomplete="new-password"
                                     minlength="8"
                                 >
+                                <button 
+                                    type="button" 
+                                    class="input-icon-btn" 
+                                    id="toggleConfirmPassword"
+                                    aria-label="Afficher le mot de passe"
+                                >
+                                    👁️
+                                </button>
                             </div>
-                        </div>
-
-                        <!-- Terms & Conditions -->
-                        <div class="form-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="terms" class="form-checkbox" required>
-                                <span>
-                                    J'accepte les 
-                                    <a href="cgv.php" class="form-link" target="_blank">
-                                        Conditions Générales de Vente
-                                    </a>
-                                    et les
-                                    <a href="legal.php" class="form-link" target="_blank">
-                                        Mentions Légales
-                                    </a>
-                                </span>
-                            </label>
                         </div>
 
                         <!-- Submit Button -->
@@ -173,5 +179,8 @@
     <!-- Include Footer -->
     <?php include '../components/footer.php'; ?>
 
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/auth.js"></script>
 </body>
 </html>

@@ -1,7 +1,14 @@
+<?php
+/**
+ * Footer Component
+ * Reusable footer section
+ */
 
-<head>
-<link rel="stylesheet" href="assets/css/main.css">
-<head>
+// Define base path for navigation
+$basePath = dirname($_SERVER['PHP_SELF']);
+$isInPages = strpos($basePath, '/pages') !== false;
+$baseUrl = $isInPages ? '..' : '.';
+?>
 <footer class="main-footer">
     <div class="footer-container">
         <!-- Footer Top Section -->

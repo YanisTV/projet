@@ -1,0 +1,62 @@
+.user-greeting {
+    font-size: 0.875rem;
+    color: var(--color-gray-700);
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+.user-greeting strong {
+    color: var(--color-primary);
+}
+
+@media (max-width: 767px) {
+    .user-greeting {
+        display: block;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+}
+
+/* Dark mode styles */
+body.dark {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark .main-header {
+    background-color: #1f1f1f;
+}
+
+body.dark .main-footer {
+    background-color: #111111;
+    color: #ccc;
+}
+
+body.dark .feature-card,
+body.dark .auth-card,
+body.dark section {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark .btn-primary {
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+body.dark .btn-outline {
+    border-color: #f0f0f0;
+    color: #f0f0f0;
+}
+
+body.dark a {
+    color: #66b2ff;
+}
+
+body.dark .nav-link:hover {
+    color: #fbbf24;
+}
+
+body.dark .user-greeting {
+    color: #ccc;
+}
