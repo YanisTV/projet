@@ -1019,6 +1019,138 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+/* Shopping Cart Sidebar */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-xl);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    transition: right var(--transition-base);
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-gray-200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+}
+
+.cart-close {
+    background: none;
+    border: none;
+    font-size: var(--font-size-2xl);
+    cursor: pointer;
+    color: var(--color-gray-600);
+    transition: var(--transition-fast);
+}
+
+.cart-close:hover {
+    color: var(--color-gray-900);
+}
+
+.cart-items {
+    flex: 1;
+    padding: var(--spacing-lg);
+    overflow-y: auto;
+}
+
+.cart-empty {
+    text-align: center;
+    color: var(--color-gray-600);
+    padding: var(--spacing-xl) 0;
+}
+
+.cart-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: var(--color-gray-50);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-xs);
+}
+
+.cart-item-price {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.cart-item-remove {
+    background: none;
+    border: none;
+    color: var(--color-error);
+    cursor: pointer;
+    font-size: var(--font-size-lg);
+    transition: var(--transition-fast);
+}
+
+.cart-item-remove:hover {
+    transform: scale(1.2);
+}
+
+.cart-footer {
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--color-gray-200);
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-lg);
+}
+
+.cart-total-label {
+    font-weight: 600;
+}
+
+.cart-total-price {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: var(--font-size-2xl);
+}
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1999;
+    display: none;
+}
+
+.cart-overlay.active {
+    display: block;
+}
 
 /* Responsive - Tablet */
 @media (min-width: 768px) {
