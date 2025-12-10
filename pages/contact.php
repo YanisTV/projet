@@ -10,6 +10,7 @@ $pageTitle = "Contact — $siteName";
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title><?= htmlspecialchars($pageTitle) ?></title>
   <meta name="description" content="Contactez l'équipe ShopList pour toute question, suggestion ou assistance.">
+  <link rel="stylesheet" href="../assets/css/contact.css">
 </head>
 <body>
 
