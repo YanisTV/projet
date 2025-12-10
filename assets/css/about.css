@@ -1,0 +1,200 @@
+/* Reset très léger */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.45;
+    color: #1f2937;
+    background: #f7fafc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 20px
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px
+}
+
+.brand {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.logo {
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #10b981, #06b6d4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.12)
+}
+
+h1.site-title {
+    font-size: 20px
+}
+
+.hero {
+    background: white;
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.hero h2 {
+    font-size: 24px
+}
+
+.hero p.lead {
+    color: #374151
+}
+
+.cta-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+}
+
+.btn-primary {
+    background: #0ea5a3;
+    color: white
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid #e6eef0;
+    color: #0f172a
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 18px
+}
+
+@media (max-width:700px) {
+    .features {
+        grid-template-columns: 1fr
+    }
+    .header-right {
+        display: none
+    }
+    .brand .logo {
+        width: 44px;
+        height: 44px
+    }
+    .hero h2 {
+        font-size: 20px
+    }
+}
+
+.card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 23, 42, 0.03);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.icon {
+    font-size: 22px;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 6px
+}
+
+.card p {
+    color: #475569;
+    font-size: 14px
+}
+
+.progress-note {
+    margin-top: 8px;
+    color: #6b7280;
+    font-size: 14px
+}
+
+footer {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center
+}
+
+.links {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.small {
+    font-size: 13px;
+    color: #6b7280
+}
+
+.socials {
+    display: flex;
+    gap: 8px
+}
+
+.socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #e6eef0;
+    text-decoration: none
+}

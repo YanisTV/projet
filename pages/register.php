@@ -136,6 +136,23 @@
                             </div>
                         </div>
 
+                        <!-- Terms & Conditions -->
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" class="form-checkbox" required>
+                                <span>
+                                    J'accepte les 
+                                    <a href="cgv.php" class="form-link" target="_blank">
+                                        Conditions Générales de Vente
+                                    </a>
+                                    et les
+                                    <a href="legal.php" class="form-link" target="_blank">
+                                        Mentions Légales
+                                    </a>
+                                </span>
+                            </label>
+                        </div>
+
                         <!-- Submit Button -->
                         <button type="submit" class="btn btn-primary btn-full">
                             Créer mon compte
