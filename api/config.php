@@ -4,12 +4,7 @@
  * Main configuration file for database connection
  */
 
-// Database credentials
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'shoplist_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_CHARSET', 'utf8mb4');
+require_once __DIR__. '/config/param.dev.php';
 
 // Create PDO connection
 try {
