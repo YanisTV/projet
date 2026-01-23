@@ -3,7 +3,6 @@
 ShopList est une application Web **Mobile First** destinée à aider les utilisateurs à organiser et effectuer leurs courses en magasin.  
 Le projet est réalisé dans un cadre pédagogique, en **binôme**, avec une méthodologie **agile**, du versioning Git/GitHub et un déploiement continu.
 
----
 
 ## 🚀 Objectifs du projet
 
@@ -12,7 +11,6 @@ Le projet est réalisé dans un cadre pédagogique, en **binôme**, avec une mé
 - Respecter un cahier des charges technique strict
 - Mettre en production une application Web fonctionnelle
 
----
 
 ## 🧩 Fonctionnalités principales
 
@@ -26,7 +24,6 @@ Le projet est réalisé dans un cadre pédagogique, en **binôme**, avec une mé
 - Interface **Mobile First**
 - Application transformée en **SPA (Single Page Application)**
 
----
 
 ## 🛠️ Technologies utilisées
 
@@ -48,7 +45,6 @@ Le projet est réalisé dans un cadre pédagogique, en **binôme**, avec une mé
 - GitHub Pages (déploiement)
 - Visual Studio Code
 
----
 
 ## 📁 Arborescence du projet
 /assets
@@ -65,7 +61,6 @@ README.md
 - Nommage en anglais
 - Pas de fichiers inutiles à la racine
 
----
 
 ## 📋 Gestion de projet
 
@@ -74,7 +69,6 @@ README.md
 - Colonnes : `To do`, `In progress`, `Done`
 - Assignation des tâches par membre
 
----
 
 ## 🔀 Git & GitHub
 
@@ -83,7 +77,6 @@ README.md
 - Pull Requests avec review du Tech Lead (changement au j3)
 - Déploiement fréquent d’une version stable
 
----
 
 ## 📱 UX / UI
 
@@ -93,6 +86,5 @@ README.md
 - Helpers pour les formulaires
 - Navigation fluide entre les pages
 
----
 
 
