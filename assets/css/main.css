@@ -13,11 +13,9 @@
     --color-primary: #6366f1;
     --color-primary-dark: #4f46e5;
     --color-primary-light: #818cf8;
-
     /* Secondary Colors */
     --color-secondary: #10b981;
     --color-secondary-dark: #059669;
-
     /* Neutral Colors */
     --color-white: #ffffff;
     --color-black: #000000;
@@ -29,12 +27,10 @@
     --color-gray-700: #374151;
     --color-gray-800: #1f2937;
     --color-gray-900: #111827;
-
     /* Semantic Colors */
     --color-success: #10b981;
     --color-error: #ef4444;
     --color-warning: #f59e0b;
-
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -42,7 +38,6 @@
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-2xl: 4rem;
-
     /* Typography */
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --font-size-sm: 0.875rem;
@@ -52,20 +47,17 @@
     --font-size-2xl: 1.5rem;
     --font-size-3xl: 2rem;
     --font-size-4xl: 2.5rem;
-
     /* Border Radius */
     --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
     --radius-full: 9999px;
-
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-
     /* Transitions */
     --transition-fast: 150ms ease-in-out;
     --transition-base: 300ms ease-in-out;
@@ -82,6 +74,7 @@ body {
     color: var(--color-gray-800);
     background-color: var(--color-white);
 }
+
 
 /* ===================================
    HEADER & NAVBAR
@@ -132,7 +125,9 @@ body {
     color: var(--color-primary);
 }
 
+
 /* Mobile Menu Toggle */
+
 .nav-toggle {
     display: flex;
     flex-direction: column;
@@ -150,7 +145,9 @@ body {
     transition: var(--transition-base);
 }
 
+
 /* Navigation Menu */
+
 .nav-menu {
     display: none;
     position: absolute;
@@ -196,6 +193,7 @@ body {
     gap: var(--spacing-sm);
 }
 
+
 /* ===================================
    BUTTONS
    =================================== */
@@ -240,6 +238,7 @@ body {
     font-size: var(--font-size-lg);
 }
 
+
 /* ===================================
    MAIN CONTENT
    =================================== */
@@ -248,7 +247,9 @@ body {
     min-height: calc(100vh - 200px);
 }
 
+
 /* Hero Section */
+
 .hero-section {
     padding: var(--spacing-2xl) 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -312,7 +313,9 @@ body {
     font-size: 6rem;
 }
 
+
 /* Features Section */
+
 .features-section {
     padding: var(--spacing-2xl) 0;
     background-color: var(--color-gray-50);
@@ -375,7 +378,9 @@ body {
     line-height: 1.7;
 }
 
+
 /* CTA Section */
+
 .cta-section {
     padding: var(--spacing-2xl) 0;
     background-color: var(--color-primary);
@@ -409,6 +414,7 @@ body {
 .cta-section .btn-primary:hover {
     background-color: var(--color-gray-100);
 }
+
 
 /* ===================================
    FOOTER
@@ -473,7 +479,6 @@ body {
 
 .social-links {
     display: flex;
-    margin-left: 70px;
     justify-content: center;
     gap: var(--spacing-sm);
 }
@@ -510,6 +515,7 @@ body {
     color: var(--color-gray-600);
 }
 
+
 /* ===================================
    RESPONSIVE DESIGN - TABLET
    =================================== */
@@ -518,7 +524,6 @@ body {
     .nav-toggle {
         display: none;
     }
-
     .nav-menu {
         display: flex !important;
         position: static;
@@ -529,44 +534,40 @@ body {
         box-shadow: none;
         background-color: transparent;
     }
-
     .nav-list {
         flex-direction: row;
         margin-bottom: 0;
     }
-
     .nav-auth {
         flex-direction: row;
     }
-
     .hero-title {
         font-size: var(--font-size-4xl);
     }
-
     .hero-actions {
         flex-direction: row;
         justify-content: center;
     }
-
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .footer-content {
         grid-template-columns: repeat(3, 1fr);
         text-align: left;
     }
-
     .social-links {
         justify-content: flex-start;
     }
 }
 
+
 /* ===================================
    SHOP PAGE STYLES
    =================================== */
 
+
 /* Shop Hero */
+
 .shop-hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: var(--spacing-xl) 0;
@@ -592,7 +593,9 @@ body {
     opacity: 0.95;
 }
 
+
 /* Search Bar */
+
 .search-bar {
     max-width: 600px;
     margin: 0 auto var(--spacing-md);
@@ -623,7 +626,9 @@ body {
     transform: scale(1.05);
 }
 
+
 /* Cart Icon */
+
 .cart-icon-wrapper {
     margin-top: var(--spacing-md);
 }
@@ -662,7 +667,9 @@ body {
     font-weight: 700;
 }
 
+
 /* Filters */
+
 .filters-section {
     background-color: var(--color-white);
     padding: var(--spacing-md) 0;
@@ -702,7 +709,9 @@ body {
     color: var(--color-white);
 }
 
+
 /* Products Section */
+
 .products-section,
 .recipes-section,
 .lists-section {
@@ -735,7 +744,9 @@ body {
     margin-top: var(--spacing-xl);
 }
 
+
 /* Product Card */
+
 .product-card {
     background-color: var(--color-white);
     border-radius: var(--radius-lg);
@@ -810,7 +821,9 @@ body {
     width: 100%;
 }
 
+
 /* Recipe Card */
+
 .recipe-card {
     background-color: var(--color-white);
     border-radius: var(--radius-lg);
@@ -870,7 +883,9 @@ body {
     flex: 1;
 }
 
+
 /* List Card */
+
 .list-card {
     background-color: var(--color-white);
     border-radius: var(--radius-lg);
@@ -954,7 +969,9 @@ body {
     flex: 1;
 }
 
+
 /* Share Section */
+
 .share-section {
     background-color: var(--color-white);
     padding: var(--spacing-2xl) 0;
@@ -1020,7 +1037,9 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+
 /* Shopping Cart Sidebar */
+
 .cart-sidebar {
     position: fixed;
     top: 0;
@@ -1153,31 +1172,35 @@ body {
     display: block;
 }
 
+
 /* Responsive - Tablet */
+
 @media (min-width: 768px) {
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .share-buttons {
         justify-content: center;
     }
 }
 
+
 /* Responsive - Desktop */
+
 @media (min-width: 1024px) {
     .products-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
+
 /* Animations */
+
 @keyframes slideIn {
     from {
         transform: translateX(100%);
         opacity: 0;
     }
-
     to {
         transform: translateX(0);
         opacity: 1;
@@ -1189,12 +1212,12 @@ body {
         transform: translateX(0);
         opacity: 1;
     }
-
     to {
         transform: translateX(100%);
         opacity: 0;
     }
 }
+
 
 /* ===================================
    AUTHENTICATION PAGES
@@ -1242,7 +1265,9 @@ body {
     color: var(--color-gray-600);
 }
 
+
 /* Form Styles */
+
 .auth-form {
     display: flex;
     flex-direction: column;
@@ -1399,7 +1424,9 @@ body {
     text-decoration: underline;
 }
 
+
 /* Auth Info Cards */
+
 .auth-info {
     display: grid;
     gap: var(--spacing-sm);
@@ -1425,6 +1452,7 @@ body {
     color: var(--color-gray-700);
 }
 
+
 /* ===================================
    RESPONSIVE DESIGN - DESKTOP
    =================================== */
@@ -1436,50 +1464,24 @@ body {
         align-items: center;
         gap: var(--spacing-2xl);
     }
-
     .hero-content {
         text-align: left;
         margin-bottom: 0;
     }
-
     .hero-actions {
         justify-content: flex-start;
     }
-
     .hero-illustration {
         width: 300px;
         height: 300px;
     }
-
     .features-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-
     .auth-container {
         max-width: 600px;
     }
-
     .auth-info {
         grid-template-columns: repeat(3, 1fr);
     }
-}
-
-
-.product-image {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: var(--spacing-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    /* empêche l'image de dépasser */
-    border-radius: var(--radius-full);
-    /* cercle si tu veux */
-}
-
-.product-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* remplit le conteneur sans déformation */
 }

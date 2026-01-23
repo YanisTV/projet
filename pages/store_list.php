@@ -109,5 +109,6 @@
         // Load stores when page loads
         document.addEventListener('DOMContentLoaded', loadStores);
     </script>
+        <script src="../assets/js/main.js"></script>
 </body>
 </html>
