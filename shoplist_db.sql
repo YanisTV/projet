@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 10 déc. 2025 à 14:30
+-- Généré le : ven. 23 jan. 2026 à 13:12
 -- Version du serveur : 8.4.7
 -- Version de PHP : 8.3.28
 
@@ -20,28 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `shoplist_db`
 --
-
--- --------------------------------------------------------
-
---
--- Structure de la table `cart_items`
---
-
-DROP TABLE IF EXISTS `cart_items`;
-CREATE TABLE IF NOT EXISTS `cart_items` (
-  `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
-  `user_id` int UNSIGNED NOT NULL,
-  `product_id` int UNSIGNED NOT NULL,
-  `product_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `quantity` decimal(10,2) NOT NULL DEFAULT '1.00',
-  `price` decimal(10,2) NOT NULL,
-  `added_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `unique_user_product` (`user_id`,`product_id`),
-  KEY `product_id` (`product_id`),
-  KEY `idx_user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -89,7 +67,14 @@ CREATE TABLE IF NOT EXISTS `orders` (
   KEY `store_id` (`store_id`),
   KEY `idx_user` (`user_id`),
   KEY `idx_status` (`status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `store_id`, `total_amount`, `status`, `order_type`, `notes`, `created_at`, `updated_at`) VALUES
+(1, 3, 1, 29.90, 'pending', 'online', '', '2026-01-23 09:46:27', '2026-01-23 09:46:27');
 
 -- --------------------------------------------------------
 
@@ -108,7 +93,23 @@ CREATE TABLE IF NOT EXISTS `order_items` (
   PRIMARY KEY (`id`),
   KEY `product_id` (`product_id`),
   KEY `idx_order` (`order_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `order_items`
+--
+
+INSERT INTO `order_items` (`id`, `order_id`, `product_id`, `quantity`, `unit_price`, `subtotal`) VALUES
+(1, 1, 15, 1.00, 4.10, 4.10),
+(2, 1, 22, 1.00, 2.10, 2.10),
+(3, 1, 9, 1.00, 1.45, 1.45),
+(4, 1, 10, 1.00, 3.10, 3.10),
+(5, 1, 6, 1.00, 2.70, 2.70),
+(6, 1, 11, 1.00, 5.40, 5.40),
+(7, 1, 17, 1.00, 3.40, 3.40),
+(8, 1, 18, 1.00, 2.80, 2.80),
+(9, 1, 19, 1.00, 1.75, 1.75),
+(10, 1, 20, 1.00, 3.10, 3.10);
 
 -- --------------------------------------------------------
 
@@ -396,14 +397,13 @@ CREATE TABLE IF NOT EXISTS `stores` (
 --
 
 INSERT INTO `stores` (`id`, `name`, `address`, `city`, `postal_code`, `latitude`, `longitude`, `created_at`) VALUES
-(1, 'Magasin Paris', '12 Rue Exemple, 75001 Paris', 'Paris', '75001', 48.85660000, 2.35220000, '2025-10-15 07:48:11'),
-(2, 'Magasin Lyon', '45 Rue Bellecour, 69002 Lyon', 'Lyon', '69002', 45.76400000, 4.83570000, '2025-10-15 07:48:11'),
-(3, 'Magasin Marseille', '3 Rue Paradis, 13001 Marseille', 'Marseille', '13001', 43.29650000, 5.36980000, '2025-10-15 07:48:11'),
-(4, 'Magasin Paris 15ème', '25 Rue de la Convention, 75015 Paris', 'Paris', '75015', 48.84060000, 2.29500000, '2025-10-15 09:13:33'),
-(5, 'Magasin Boulogne-Billancourt', '78 Avenue Jean-Baptiste Clément, 92100 Boulogne-Billancourt', 'Boulogne-Billancourt', '92100', 48.84150000, 2.23990000, '2025-10-15 09:13:33'),
-(6, 'Magasin Montreuil', '15 Boulevard Théophile Sueur, 93100 Montreuil', 'Montreuil', '93100', 48.85890000, 2.44390000, '2025-10-15 09:13:33'),
-(7, 'Magasin Saint-Denis', '32 Avenue du Président Wilson, 93200 Saint-Denis', 'Saint-Denis', '93200', 48.93620000, 2.35440000, '2025-10-15 09:13:33'),
-(8, 'Magasin CFA ITIS', '46 Bd de l\'Yerres', 'Évry-Courcouronnes', '91000', 48.61896400, 2.42871618, '2025-12-10 14:04:23');
+(1, 'ShopList ', '12 Rue Exemple, 75001 Paris', 'Paris', '75001', 48.85660000, 2.35220000, '2025-10-15 07:48:11'),
+(2, 'Shoplist Lyon', '45 Rue Bellecour, 69002 Lyon', 'Lyon', '69002', 45.76400000, 4.83570000, '2025-10-15 07:48:11'),
+(3, 'ShopList Marseille', '3 Rue Paradis, 13001 Marseille', 'Marseille', '13001', 43.29650000, 5.36980000, '2025-10-15 07:48:11'),
+(4, 'ShopList Paris 15ème', '25 Rue de la Convention, 75015 Paris', 'Paris', '75015', 48.84060000, 2.29500000, '2025-10-15 09:13:33'),
+(5, 'ShopList Boulogne-Billancourt', '78 Avenue Jean-Baptiste Clément, 92100 Boulogne-Billancourt', 'Boulogne-Billancourt', '92100', 48.84150000, 2.23990000, '2025-10-15 09:13:33'),
+(6, 'Shoplist Montreuil', '15 Boulevard Théophile Sueur, 93100 Montreuil', 'Montreuil', '93100', 48.85890000, 2.44390000, '2025-10-15 09:13:33'),
+(8, 'Shoplist CFA ITIS', '46 Bd de l\'Yerres', 'Évry-Courcouronnes', '91000', 48.61896400, 2.42871618, '2025-12-10 14:04:23');
 
 -- --------------------------------------------------------
 
@@ -423,7 +423,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`),
   KEY `idx_email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `users`
@@ -431,18 +431,12 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `created_at`, `updated_at`) VALUES
 (1, 'elyes', 'jaffel', 'elyesjaffel1@gmail.com', '$2y$10$lnhCsu9Vf/Mq3OhcqxvXEOtSUfVrzF2mTqvo7Cb/4v2KaMaijRu7.', '2025-10-15 08:06:30', '2025-10-15 08:06:30'),
-(2, 'eaze', 'eaezae', 'yanisamandpro@gmail.com', '$2y$10$Jsb9KoxQTcB64r0bbgELLOmPu.G4qGE5qAS80dpgwGybuMvI4CPOe', '2025-12-10 14:09:00', '2025-12-10 14:09:00');
+(2, 'eaze', 'eaezae', 'yanisamandpro@gmail.com', '$2y$10$Jsb9KoxQTcB64r0bbgELLOmPu.G4qGE5qAS80dpgwGybuMvI4CPOe', '2025-12-10 14:09:00', '2025-12-10 14:09:00'),
+(3, 'Yanis', 'AMAND', 'shakzeryt2004@gmail.com', '$2y$10$ZXDjjbe4vmd9phfjqRYQZOEeDjcoB72lLXp4Mb/JPYUqIk4ca.h6G', '2026-01-23 09:35:04', '2026-01-23 09:35:04');
 
 --
 -- Contraintes pour les tables déchargées
 --
-
---
--- Contraintes pour la table `cart_items`
---
-ALTER TABLE `cart_items`
-  ADD CONSTRAINT `cart_items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
-  ADD CONSTRAINT `cart_items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `orders`
