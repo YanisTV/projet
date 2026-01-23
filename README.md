@@ -1,10 +1,10 @@
-# 🛒 ShopList – Application Web de gestion de courses
+# ShopList – Application Web de gestion de courses
 
 ShopList est une application Web **Mobile First** destinée à aider les utilisateurs à organiser et effectuer leurs courses en magasin.  
 Le projet est réalisé dans un cadre pédagogique, en **binôme**, avec une méthodologie **agile**, du versioning Git/GitHub et un déploiement continu.
 
 
-## 🚀 Objectifs du projet
+## Objectifs du projet
 
 - Faciliter la création et la gestion de listes de courses
 - Offrir une expérience fluide sur **smartphone**
@@ -12,7 +12,7 @@ Le projet est réalisé dans un cadre pédagogique, en **binôme**, avec une mé
 - Mettre en production une application Web fonctionnelle
 
 
-## 🧩 Fonctionnalités principales
+## Fonctionnalités principales
 
 - Création et gestion de listes de courses
 - Ajout, suppression et tri des articles
@@ -25,7 +25,7 @@ Le projet est réalisé dans un cadre pédagogique, en **binôme**, avec une mé
 - Application transformée en **SPA (Single Page Application)**
 
 
-## 🛠️ Technologies utilisées
+## Technologies utilisées
 
 ### Front-end
 - HTML (balises sémantiques)
@@ -46,7 +46,7 @@ Le projet est réalisé dans un cadre pédagogique, en **binôme**, avec une mé
 - Visual Studio Code
 
 
-## 📁 Arborescence du projet
+## Arborescence du projet
 /assets
 /css
 /js
@@ -62,7 +62,7 @@ README.md
 - Pas de fichiers inutiles à la racine
 
 
-## 📋 Gestion de projet
+## Gestion de projet
 
 - Méthodologie **agile**
 - Suivi des tâches via **GitHub Projects**
@@ -70,7 +70,7 @@ README.md
 - Assignation des tâches par membre
 
 
-## 🔀 Git & GitHub
+## Git & GitHub
 
 - Travail sur branches (jamais directement sur `main`)
 - Commits en anglais (francais au debut)
@@ -78,7 +78,7 @@ README.md
 - Déploiement fréquent d’une version stable
 
 
-## 📱 UX / UI
+## UX / UI
 
 - Approche **Mobile First**
 - Interfaces simples et essentielles
